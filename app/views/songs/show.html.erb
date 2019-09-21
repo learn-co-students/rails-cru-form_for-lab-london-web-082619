@@ -1,0 +1,5 @@
+<%= content_tag(:h1, @song.name) %>
+<ul>
+  <li>Artist: <%= link_to @song.artist_name, artist_path(@song.artist) %></li>
+  <li>Genre: <%= link_to @song.genre_name, genre_path(@song.genre) %></li>
+</ul>
