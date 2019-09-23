@@ -1,29 +1,40 @@
 Rails.application.routes.draw do
-  get 'songs/index', to: "songs#index"
+  
+  get '/songs/', to: "songs#index", as: "songs"
 
-  get 'songs/new'
+  get '/songs/new', to: "songs#new", as: "new_song"
 
-  get 'songs/show'
+  post '/songs', to: "songs#create"
 
-  get 'songs/edit'
+  get '/songs/:id', to: "songs#show", as: "song"
 
-  get 'genres/index'
+  get '/songs/:id/edit', to: "songs#edit", as: "edit_song"
 
-  get 'genres/new'
+  patch "/songs/:id", to: "songs#update"
 
-  get 'genres/show'
+  get '/genres', to: "genres#index", as: "genres"
 
-  get 'genres/edit'
+  get '/genres/new', to: "genres#new", as: "new_genre"
 
-  get 'artists', to: "artists#index", as: "artists"
+  post "/genres", to: "genres#create"
 
-  get 'artists/new', to: "artists#new", as: "new_artist"
+  get '/genres/:id', to: "genres#show", as: "genre"
 
-  post "artists", to: "artists#create"
+  get '/genres/:id/edit', to: "genres#edit", as: "edit_genre"
 
-  get 'artists/:id', to: "artists#show", as: "artist"
+  patch "/genres/:id", to: "genres#update"
 
-  get 'artists/:id/edit', to: "artists#edit"
+  get '/artists', to: "artists#index", as: "artists"
+
+  get '/artists/new', to: "artists#new", as: "new_artist"
+
+  post "/artists", to: "artists#create"
+
+  get '/artists/:id', to: "artists#show", as: "artist"
+
+  get '/artists/:id/edit', to: "artists#edit", as: "edit_artist"
+  
+  patch "/artists/:id", to: "artists#update"
 
 
 
