@@ -31,7 +31,7 @@ class SongsController < ApplicationController
   
   def song_params
     params.require(:song).permit!
-    
+    # byebug
   end
 
 end
