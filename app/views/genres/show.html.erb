@@ -1,2 +1,6 @@
-<h1>Genres#show</h1>
-<p>Find me in app/views/genres/show.html.erb</p>
+<h1>My Genre</h1>
+<h3>My genre name: <%= @genre.name %></h3><br>
+
+
+<%= link_to "Edit?", edit_genre_path(@genre)%>
+<%= link_to "Back to Index", genres_path %>

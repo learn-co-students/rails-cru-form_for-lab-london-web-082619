@@ -4,7 +4,7 @@ class ArtistsController < ApplicationController
   end
 
   def new
-    @artist = Artist.new # このインスタンスがからかデータベースにあるかでFormの判定に使うので必要
+    @artist = Artist.new
   end
 
   def show
