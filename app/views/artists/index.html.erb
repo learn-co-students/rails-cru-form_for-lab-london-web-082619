@@ -1,0 +1,10 @@
+<% @artists.each do |artist| %>
+   <h1> <%= link_to artist.name, artist %> </h1>
+    <%= artist.bio %>
+    <br>
+    <%= link_to "Edit", edit_artist_path(artist) %> |
+    <%= link_to "Delete", artist_path(artist), method: :delete,
+    data: {confirm: 'Are you sure?'} %>
+<% end %>
+<br><br>
+<%= link_to "Create Artist", new_artist_path %>
