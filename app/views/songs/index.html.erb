@@ -1,7 +1,7 @@
 <% @songs.each do |song| %>
     <p> <%= link_to song.name, song %> </p>
-     <%= song.artist_id %>
-     <%= song.genre_id %>
+     <%= (song.artist.name) if song.artist %>
+     <%= (song.genre.name) if song.genre %>
      <br>
      <%= link_to "Edit", edit_song_path(song) %> |
      <%= link_to "Delete", song_path(song), method: :delete,
