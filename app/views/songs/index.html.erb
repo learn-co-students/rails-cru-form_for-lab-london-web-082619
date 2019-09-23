@@ -1,0 +1,11 @@
+<% @songs.each do |song| %>
+    <p> <%= link_to song.name, song %> </p>
+     <%= song.artist_id %>
+     <%= song.genre_id %>
+     <br>
+     <%= link_to "Edit", edit_song_path(song) %> |
+     <%= link_to "Delete", song_path(song), method: :delete,
+     data: {confirm: 'Are you sure?'} %>
+ <% end %>
+ <br><br>
+ <%= link_to "Create Song", new_song_path %>

@@ -1,0 +1,10 @@
+<% @genres.each do |genre| %>
+    <h1> <%= link_to genre.name, genre %> </h1>
+     <%= genre.bio %>
+     <br>
+     <%= link_to "Edit", edit_genre_path(genre) %> |
+     <%= link_to "Delete", genre_path(genre), method: :delete,
+     data: {confirm: 'Are you sure?'} %>
+ <% end %>
+ <br><br>
+ <%= link_to "Create Genre", new_genre_path %>
