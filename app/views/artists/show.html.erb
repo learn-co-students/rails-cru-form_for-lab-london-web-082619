@@ -1,0 +1,6 @@
+<h1>My Artist</h1>
+<h3>My artist name: <%= @artist.name %></h3><br>
+<p>My artist bio: <%= @artist.bio %><p>
+
+<%= link_to "Edit?", edit_artist_path(@artist)%>
+<%= link_to "Back to Index", artists_path %>
